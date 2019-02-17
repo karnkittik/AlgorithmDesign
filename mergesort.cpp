@@ -18,13 +18,14 @@ void mergesort(int d[],int left,int right){
     merge(d,left,mid,right);
 }
 int main(){
-    int n[10];int x;
-    for(int i=0;i<10;i++){
+    int m;cin>>m;
+    int n[m];int x;
+    for(int i=0;i<m;i++){
         cin>>x;
         n[i]=x;
     }
-    mergesort(n,0,9);
-    for(int i=0;i<10;i++){
+    mergesort(n,0,m-1);
+    for(int i=0;i<m;i++){
         cout<<n[i]<<" ";
     }   
 }
