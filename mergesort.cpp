@@ -4,12 +4,8 @@ void merge(int d[],int left,int mid,int right){
     int t[right];
     int i = left;int j = mid+1;
     for(int k = left;k<=right;k++){
-        if(i>mid){
-            t[k] = d[j++]; continue;
-        }
-        if(j>right){
-            t[k] = d[i++]; continue;
-        }
+        if(i>mid){ t[k] = d[j++]; continue; }
+        if(j>right){ t[k] = d[i++]; continue; }
         t[k] = (d[i]<d[j]) ? d[i++] : d[j++];
     }
     for(int k = left;k<=right;k++) d[k] = t[k];
